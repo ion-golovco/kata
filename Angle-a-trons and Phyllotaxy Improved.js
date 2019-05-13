@@ -1,4 +1,4 @@
-function round(value, precision) {
+function roun(value, precision) {
     let multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
 }
@@ -9,9 +9,9 @@ function prediction(angleATron, leafNo) {
     for (let i = 0; i < leafNo; i = i + 1) {
         arr.push(i * angleATron)
         if (arr[i]>360) {
-            result['leaf '+[i+1]] = round(arr[i]%360, 1).toFixed(1) + " degrees"
+            result['leaf '+[i+1]] = roun(arr[i]%360, 1).toFixed(1) + " degrees"
         }else{
-            result['leaf '+[i+1]] = round(arr[i],1).toFixed(1) + " degrees"
+            result['leaf '+[i+1]] = roun(arr[i],1).toFixed(1) + " degrees"
         }
     }
     return result
